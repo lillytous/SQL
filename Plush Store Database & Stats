@@ -1,0 +1,30 @@
+--Create a store database
+
+CREATE TABLE store(id INTEGER PRIMARY KEY, product TEXT, price INTEGER, quantity INTEGER, sold INTEGER);
+
+INSERT INTO store VALUES
+(1, 'Kitty Plush', 15, 30, 17),
+(2, 'Puppy Plush', 16, 45, 22),
+(3, 'Turtle Plush', 19, 27, 13),
+(4, 'Pony Plush', 17, 26, 7),
+(5, 'Dolphin Plush', 20, 36, 14),
+(6, 'Panda Plush', 19, 24, 18),
+(7, 'Dinosaur Plush', 17, 23, 19),
+(8, 'Teddybear Plush', 14, 47, 30),
+(9, 'Shark Plush', 16, 13, 18),
+(10, 'Frog Plush', 13, 14, 10),
+(11, 'Sloth Plush', 16, 12, 8),
+(12, 'Racoon Plush', 15, 23, 12),
+(13, 'Otter Plush', 17, 27, 22),
+(14, 'Gorilla Plush', 20, 14, 7),
+(15, 'Tiger Plush', 23, 16, 14);
+
+-- display the database where the products sold more than 12 items and order it by acending price
+
+SELECT * FROM store 
+WHERE sold >12 
+ORDER BY price asc;
+
+-- what is the total quantity of plushes in store?
+
+SELECT SUM(quantity) FROM store;
